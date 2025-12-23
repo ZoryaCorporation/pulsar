@@ -1,6 +1,7 @@
 # Build artifacts
 build/
 node_modules/
+lib/native/*.node
 
 # Secrets - NEVER commit
 seckeys_donotpub.md

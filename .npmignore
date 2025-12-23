@@ -5,6 +5,9 @@ tsconfig.json
 .gitignore
 .git/
 
+# Documentation (internal build docs, not for distribution)
+docs/
+
 # Secrets - NEVER publish
 seckeys_donotpub.md
 *.secret

@@ -18,25 +18,15 @@ const TESTS = [
     'ini.test.cjs',
 ];
 
-console.log(`
-    ██████╗ ██╗   ██╗██╗     ███████╗ █████╗ ██████╗ 
-    ██╔══██╗██║   ██║██║     ██╔════╝██╔══██╗██╔══██╗
-    ██████╔╝██║   ██║██║     ███████╗███████║██████╔╝
-    ██╔═══╝ ██║   ██║██║     ╚════██║██╔══██║██╔══██╗
-    ██║     ╚██████╔╝███████╗███████║██║  ██║██║  ██║
-    ╚═╝      ╚═════╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚═╝  ╚═╝
-                                                      
-              Test Suite v1.0.0
-`);
-
-console.log('═'.repeat(50));
+console.log('\n  PULSAR Test Suite v1.0.0');
+console.log('  ' + '-'.repeat(40));
 
 let passed = 0;
 let failed = 0;
 
 for (const test of TESTS) {
     const testPath = path.join(__dirname, test);
-    console.log(`\n▶ Running ${test}...`);
+    console.log(`\n  Running ${test}...`);
     
     try {
         execSync(`node "${testPath}"`, { 
@@ -49,18 +39,18 @@ for (const test of TESTS) {
     }
 }
 
-console.log('\n' + '═'.repeat(50));
+console.log('\n  ' + '-'.repeat(40));
 console.log(`
-📊 Final Results
-   ✅ Passed: ${passed}
-   ❌ Failed: ${failed}
-   📦 Total:  ${TESTS.length}
+  Results
+    Passed: ${passed}
+    Failed: ${failed}
+    Total:  ${TESTS.length}
 `);
 
 if (failed === 0) {
-    console.log('🎉 ALL SYSTEMS NOMINAL - Pulsar is ready for launch!\n');
+    console.log('  All tests passed.\n');
     process.exit(0);
 } else {
-    console.log('⚠️  Some tests failed. Please review before publishing.\n');
+    console.log('  Some tests failed.\n');
     process.exit(1);
 }
