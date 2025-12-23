@@ -1,12 +1,26 @@
 # @zoryacorporation/pulsar
 
+Author: Anthony Taliento -- Zorya Corporation   
+
 High-performance native acceleration for Node.js and Electron applications.
 
-Version: 1.0.0 | License: Apache-2.0 | Node: >=18.0.0 | Platforms: Linux, macOS
+Version: 1.0.0 | License: Apache-2.0 | Node: >=18.0.0 | 
+
+## Platforms: 
+
+Linux, macOS, Any Windows users are welcome to test, We just don't have CI for it yet however to guarantee compatibility utilizing WSL2 is recommended. Windows support is planned for a future release when the time comes. Another platform we will be supporting is WebAssembly (WASM) but that is also planned to be a seperate branch of Pulsar as this will require a different build system, and API's will need to be engineered to work within the constraints of WASM. The increase in portability WASM offers justifies the effort. We will announce when work begins on these platforms.
 
 ## Overview
 
-Pulsar provides native-speed implementations for operations that are slow in pure JavaScript. Built on the ZORYA C SDK, it delivers 10-100x performance improvements for string manipulation, compression, file operations, and hashing.
+Pulsar provides native-speed implementations for operations that are ordinarly slow or even downright impossible in pure JavaScript. Built on the ZORYA C SDK, it delivers 10-100x performance improvements for string manipulation, compression, file operations, and hashing. These modules are exposed via a clean TypeScript interface, making it easy to integrate high-performance native code into your Node.js applications. With Pulsar, you can handle large datasets, perform intensive computations, and manage files efficiently without sacrificing the developer experience. We achieve this by utilizng Node.js N-API for seamless native module integration, ensuring compatibility across Node.js versions and platforms. Whether you're building data-intensive applications, working with large files, or need fast hashing algorithms, Pulsar provides the tools you need to boost performance while keeping your codebase clean and maintainable.
+
+This also allows developers to stay within the node.js ecosystem and use familiar tools while benefiting from the performance of native code. Modern codebases often require high performance for tasks like data processing, file handling, and compression. Electron applications tend to rely on Rust or C++ multi language projects for performance-critical components. Pulsar aims to simplify this by providing a single, easy-to-use package that covers a wide range of performance needs without the complexity of managing multiple languages or build systems.
+
+**We will be adding comprehensive documentation and examples for each module including on guides, tutorials, getting started, and best practices utilizing Pulsar.**
+
+Feel free to reach out with any questions or feedback directly here on GitHub! In addition to GitHub, we are in the process of setting up community channels and a formal web platform for Pulsar and other Zorya projects.   
+
+Below is a brief overview of each module included in Pulsar along with example usage, snippets and a quick start guide.
 
 ## Installation
 
