@@ -1,0 +1,97 @@
+{
+  "name": "@zoryacorporation/pulsar",
+  "version": "1.0.0",
+  "description": "High-performance native acceleration for Node.js & Electron - Hashing, Compression, File Operations",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "require": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./weave": {
+      "import": "./lib/modules/weave.js",
+      "require": "./lib/modules/weave.js",
+      "types": "./lib/modules/weave.d.ts"
+    },
+    "./compress": {
+      "import": "./lib/modules/compress.js",
+      "require": "./lib/modules/compress.js",
+      "types": "./lib/modules/compress.d.ts"
+    },
+    "./fileops": {
+      "import": "./lib/modules/fileops.js",
+      "require": "./lib/modules/fileops.js",
+      "types": "./lib/modules/fileops.d.ts"
+    }
+  },
+  "scripts": {
+    "install": "node-gyp rebuild",
+    "build": "npm run build:native && npm run build:ts",
+    "build:native": "node-gyp rebuild",
+    "build:ts": "tsc",
+    "rebuild": "npm run clean && npm run build",
+    "clean": "rm -rf lib/ build/",
+    "test": "node test/run-all.cjs",
+    "test:weave": "node test/weave.test.cjs",
+    "test:compress": "node test/compress.test.cjs",
+    "test:fileops": "node test/fileops.test.cjs",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "keywords": [
+    "native",
+    "napi",
+    "performance",
+    "hashing",
+    "compression",
+    "zstd",
+    "lz4",
+    "file",
+    "filesystem",
+    "watch",
+    "inotify",
+    "electron",
+    "zorya",
+    "pulsar"
+  ],
+  "author": "Anthony Taliento <anthony@zorya.dev>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZoryaCorporation/pulsar.git"
+  },
+  "homepage": "https://github.com/ZoryaCorporation/pulsar#readme",
+  "bugs": {
+    "url": "https://github.com/ZoryaCorporation/pulsar/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "linux",
+    "darwin"
+  ],
+  "cpu": [
+    "x64",
+    "arm64"
+  ],
+  "files": [
+    "lib/**/*.js",
+    "lib/**/*.d.ts",
+    "lib/**/*.map",
+    "native/",
+    "binding.gyp",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "node-addon-api": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "node-gyp": "^10.0.0",
+    "typescript": "^5.3.0"
+  }
+}
