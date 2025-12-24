@@ -16,19 +16,19 @@ import { weave, compress, hash, fileops, dagger, pcm, ini } from '@zoryacorporat
 
 ### Getting Started
 
-- **[Getting Started](./docs/getting-started.md)** - Installation, setup, and your first Pulsar program: **Where you are now!**
+- **[Getting Started](./getting-started.md)** - Installation, setup, and your first Pulsar program: **Where you are now!**
 
 ### Module Guides
 
 | Module | Guide | Description |
 |--------|-------|-------------|
-| weave | [Weave Guide](./docs/weave.md) | String primitives with arena allocation and interning |
-| compress | [Compress Guide](./docs/compress.md) | Zstandard and LZ4 compression |
-| fileops | [FileOps Guide](./docs/fileops.md) | Native file operations and watching |
-| hash | [Hash Guide](./docs/hash.md) | NXH64 non-cryptographic hashing |
-| dagger | [Dagger Guide](./docs/dagger.md) | Robin Hood hash tables |
-| pcm | [PCM Guide](./docs/pcm.md) | Hardware-accelerated bit manipulation |
-| ini | [INI Guide](./docs/ini.md) | Fast INI configuration parsing |
+| weave | [Weave Guide](./weave.md) | String primitives with arena allocation and interning |
+| compress | [Compress Guide](./compress.md) | Zstandard and LZ4 compression |
+| fileops | [FileOps Guide](./fileops.md) | Native file operations and watching |
+| hash | [Hash Guide](./hash.md) | NXH64 non-cryptographic hashing |
+| dagger | [Dagger Guide](./dagger.md) | Robin Hood hash tables |
+| pcm | [PCM Guide](./pcm.md) | Hardware-accelerated bit manipulation |
+| ini | [INI Guide](./ini.md) | Fast INI configuration parsing |
 
 ## Performance
 
