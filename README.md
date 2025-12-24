@@ -16,7 +16,7 @@ Pulsar provides native-speed implementations for operations that are ordinarly s
 
 This also allows developers to stay within the node.js ecosystem and use familiar tools while benefiting from the performance of native code. Modern codebases often require high performance for tasks like data processing, file handling, and compression. Electron applications tend to rely on Rust or C++ multi language projects for performance-critical components. Pulsar aims to simplify this by providing a single, easy-to-use package that covers a wide range of performance needs without the complexity of managing multiple languages or build systems.
 
-**We will be adding comprehensive documentation and examples for each module including on guides, tutorials, getting started, and best practices utilizing Pulsar.**
+**Deep dives and tutorials found here: https://github.com/ZoryaCorporation/pulsar/blob/main/docs/README.md**
 
 Feel free to reach out with any questions or feedback directly here on GitHub! In addition to GitHub, we are in the process of setting up community channels and a formal web platform for Pulsar and other Zorya projects.   
 
